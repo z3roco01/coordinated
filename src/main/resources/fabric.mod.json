@@ -1,0 +1,36 @@
+{
+	"schemaVersion": 1,
+	"id": "coordinated",
+	"version": "${version}",
+	"name": "Coordinated",
+	"description": "simple coordinate and stuff mod, hai laika !!",
+	"authors": [
+		"z3roco01"
+	],
+	"contact": {
+	},
+	"license": "GPL-3.0",
+	"icon": "assets/coordinated/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"z3roco01.coordinated.Coordinated"
+		],
+		"client": [
+			"z3roco01.coordinated.CoordinatedClient"
+		]
+	},
+	"mixins": [
+		"coordinated.mixins.json",
+		{
+			"config": "coordinated.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
